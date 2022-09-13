@@ -1,0 +1,28 @@
+.header {
+  height: 60px;
+  background: rgb(217, 205, 44);
+  color: rgb(14, 15, 16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8rem;
+  padding: 0 8rem;
+}
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 8rem;
+  color: aqua;
+}
+
+.nav li.active {
+  background-color: #555;
+  color: aqua;
+}
+
+.nav li:hover {
+  background-color: #777;
+  color: aqua;
+}
