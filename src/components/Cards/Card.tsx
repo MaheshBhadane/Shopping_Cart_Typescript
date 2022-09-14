@@ -65,6 +65,12 @@ export default function ProductCard(props: ProductPropType) {
 
   return (
     <Grid item key={props.product.id}>
+      <Button
+        startIcon={<DeleteIcon />}
+        size="small"
+        color="secondary"
+        onClick={() => handleDelete(props.product.id)}
+      />
       <Card sx={{ maxWidth: 300 }}>
         <Box
           onClick={() => handleOnClick(props.product)}
@@ -93,12 +99,6 @@ export default function ProductCard(props: ProductPropType) {
         </Box>
 
         <CardActions>
-          <Button
-            startIcon={<DeleteIcon />}
-            size="small"
-            color="secondary"
-            onClick={() => handleDelete(props.product.id)}
-          />
           <Button
             variant="outlined"
             size="small"
