@@ -5,6 +5,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { useSelector } from "react-redux";
 import { RootStore } from "../redux/store";
 
+//Interface Type Define
 interface ProductType {
    setProduct: React.Dispatch<React.SetStateAction<any>>;
 }

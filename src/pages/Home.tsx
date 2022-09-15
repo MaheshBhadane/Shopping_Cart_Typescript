@@ -1,12 +1,13 @@
 import React from "react";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import Cards from "../components/Cards/Card";
-import CircularProgress from "@mui/material/CircularProgress";
 import { useSelector } from "react-redux";
 import { RootStore } from "../redux/store";
 import Hero from "../components/Hero/Hero";
 import { Link as RouterLink } from "react-router-dom";
+import LinearProgress from "@mui/material/LinearProgress";
 
+//Interface Type Define
 interface ProductType {
   setProduct: React.Dispatch<React.SetStateAction<any>>;
 }
@@ -26,19 +27,16 @@ export default function Home(props: ProductType) {
           </Button>
         </Grid>
         {error ? (
-          <Typography variant="h5" color="error" textAlign="center">
+          <Typography
+            marginLeft={85}
+            variant="h5"
+            color="error"
+            textAlign="center"
+          >
             Something went wrong!
           </Typography>
         ) : loading ? (
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircularProgress size={50} />
-          </Box>
+          <LinearProgress />
         ) : (
           <Grid container justifyContent="center" spacing={3}>
             {products?.map((product) => (

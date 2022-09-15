@@ -13,6 +13,7 @@ import { useDispatch } from "react-redux";
 import { getProducts } from "./redux/actions/ProductActions";
 import Error from "./pages/Error";
 
+//Interface Type DefineSS
 export interface ProductType {
   id: number;
   title: string;
@@ -24,7 +25,7 @@ export interface ProductType {
 function App() {
   const [product, setProduct] = useState<ProductType>();
   const dispatch: Dispatch<any> = useDispatch();
-
+  //TO GET PRODUCTS
   useEffect(() => {
     (() => {
       dispatch(getProducts());
@@ -39,14 +40,11 @@ function App() {
           <Route path="/" element={<Home setProduct={setProduct} />} />
           <Route path="/shop" element={<Shop setProduct={setProduct} />} />
           <Route path="/shop/:id" element={<CardDetails product={product} />} />
-
           <Route
             path="/wishlist"
             element={<Wishlist setProduct={setProduct} />}
           />
-
           <Route path="/cart" element={<Cart setProduct={setProduct} />} />
-
           <Route path="/admin" element={<Admin />} />
           <Route
             path="*"

@@ -3,55 +3,55 @@ export const SET_PRODUCTS = "SET_PRODUCTS";
 export const SET_ERROR = "SET_ERROR";
 export const SET_WISHLIST = "SET_WISHLIST";
 export const SET_CART = "SET_CART";
-export const ADD_PRODUCT = "ADD_PRODUCT";
-export const DELETE_PRODUCT = "DELETE_PRODUCT";
+export const ADD_CARD = "ADD_CARD";
+export const DELETE_CARD = "DELETE_CARD";
 
 export type ProductType = {
-   id: number;
-   title: string;
-   description: string;
-   price: number;
-   image: string;
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  image: string;
 };
 interface LoadingData {
-   type: typeof LOADING_DATA;
+  type: typeof LOADING_DATA;
 }
 
 interface SetProducts {
-   type: typeof SET_PRODUCTS;
-   payload: ProductType[];
+  type: typeof SET_PRODUCTS;
+  payload: ProductType[];
 }
 
 interface SetError {
-   type: typeof SET_ERROR;
-   payload: string;
+  type: typeof SET_ERROR;
+  payload: string;
 }
 
 interface SetWishlist {
-   type: typeof SET_WISHLIST;
-   payload: ProductType;
+  type: typeof SET_WISHLIST;
+  payload: ProductType;
 }
 
 interface SetCart {
-   type: typeof SET_CART;
-   payload: ProductType;
+  type: typeof SET_CART;
+  payload: ProductType;
 }
 
 interface AddProduct {
-   type: typeof ADD_PRODUCT;
-   payload: ProductType;
+  type: typeof ADD_CARD;
+  payload: ProductType;
 }
 
 interface DeleteProduct {
-   type: typeof DELETE_PRODUCT;
-   payload: number;
+  type: typeof DELETE_CARD;
+  payload: number;
 }
 
 export type ProductDispatchTypes =
-   | LoadingData
-   | SetProducts
-   | SetError
-   | SetCart
-   | SetWishlist
-   | AddProduct
-   | DeleteProduct;
+  | LoadingData
+  | SetProducts
+  | SetError
+  | SetCart
+  | SetWishlist
+  | AddProduct
+  | DeleteProduct;

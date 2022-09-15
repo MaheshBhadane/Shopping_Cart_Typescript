@@ -4,6 +4,7 @@ import Cards from "../components/Cards/Card";
 import { useSelector } from "react-redux";
 import { RootStore } from "../redux/store";
 
+//Interface Type Define
 interface CartType {
   setProduct: React.Dispatch<React.SetStateAction<any>>;
 }

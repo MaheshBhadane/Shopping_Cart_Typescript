@@ -9,19 +9,18 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-
-import { useNavigate } from "react-router-dom";
-import { ProductType } from "../../App";
-import DeleteIcon from "@mui/icons-material/Delete";
-import { useDispatch, useSelector } from "react-redux";
-
 import {
   deleteCard,
   setProductCart,
   setProductWishlist,
 } from "../../redux/actions/ProductActions";
 import { RootStore } from "../../redux/store";
+import { useNavigate } from "react-router-dom";
+import { ProductType } from "../../App";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { useDispatch, useSelector } from "react-redux";
 
+//Interface Type Define
 interface CardType {
   product: ProductType;
   setProduct: React.Dispatch<React.SetStateAction<any>>;
@@ -34,12 +33,13 @@ export default function Cards(props: CardType) {
 
   const dispatch: Dispatch<any> = useDispatch();
 
+//Check product is in wishlist or not
   const inWishlist = (id: number): boolean => {
     if (wishlist.find((product) => product.id === id)) {
       return true;
     } else return false;
   };
-
+//Check product is in cart or not
   const inCart = (id: number): boolean => {
     if (cart.find((product) => product.id === id)) {
       return true;

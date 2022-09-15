@@ -13,6 +13,7 @@ export default function Admin() {
   const dispatch: Dispatch<any> = useDispatch();
 
   const handleImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //filereader for an image
     let reader = new FileReader();
     if (e.target.files instanceof FileList) {
       reader.readAsDataURL(e.target.files[0]);
