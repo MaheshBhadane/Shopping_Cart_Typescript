@@ -1,21 +1,21 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import ProductCard from "../components/Cards/Card";
+import Cards from "../components/Cards/Card";
 import { useSelector } from "react-redux";
 import { RootStore } from "../redux/store";
 
-interface WishlistPropType {
+interface WishlistType {
   setProduct: React.Dispatch<React.SetStateAction<any>>;
 }
 
-export default function Wishlist(props: WishlistPropType) {
+export default function Wishlist(props: WishlistType) {
   const { wishlist } = useSelector((state: RootStore) => state.products);
   return (
     <Box sx={{ padding: 3 }}>
       {wishlist.length ? (
         <Grid container justifyContent="center" spacing={3}>
           {wishlist.map((product) => (
-            <ProductCard
+            <Cards
               product={product}
               key={product.id}
               setProduct={props.setProduct}

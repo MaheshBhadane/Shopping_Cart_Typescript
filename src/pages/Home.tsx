@@ -1,17 +1,17 @@
 import React from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
-import ProductCard from "../components/Cards/Card";
+import Cards from "../components/Cards/Card";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useSelector } from "react-redux";
 import { RootStore } from "../redux/store";
 import Hero from "../components/Hero/Hero";
 import { Link as RouterLink } from "react-router-dom";
 
-interface ProductPropType {
+interface ProductType {
   setProduct: React.Dispatch<React.SetStateAction<any>>;
 }
 
-export default function Home(props: ProductPropType) {
+export default function Home(props: ProductType) {
   const { products, loading, error } = useSelector(
     (state: RootStore) => state.products
   );
@@ -42,7 +42,7 @@ export default function Home(props: ProductPropType) {
         ) : (
           <Grid container justifyContent="center" spacing={3}>
             {products?.map((product) => (
-              <ProductCard
+              <Cards
                 product={product}
                 key={product.id}
                 setProduct={props.setProduct}

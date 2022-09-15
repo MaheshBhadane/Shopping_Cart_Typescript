@@ -13,8 +13,6 @@ export type ProductType = {
    price: number;
    image: string;
 };
-
-//dispatch types
 interface LoadingData {
    type: typeof LOADING_DATA;
 }

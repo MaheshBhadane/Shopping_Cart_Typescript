@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
-import ProductDetails from "./pages/CardDetails";
+import CardDetails from "./pages/CardDetails";
 import Wishlist from "./pages/Wishlist";
 import Cart from "./pages/Cart";
 import Admin from "./pages/Admin";
@@ -38,10 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home setProduct={setProduct} />} />
           <Route path="/shop" element={<Shop setProduct={setProduct} />} />
-          <Route
-            path="/shop/:id"
-            element={<ProductDetails product={product} />}
-          />
+          <Route path="/shop/:id" element={<CardDetails product={product} />} />
 
           <Route
             path="/wishlist"

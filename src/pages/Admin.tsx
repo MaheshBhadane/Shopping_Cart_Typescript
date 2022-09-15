@@ -1,7 +1,7 @@
 import React, { Dispatch, useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { addProduct } from "../redux/actions/ProductActions";
+import { addCard } from "../redux/actions/ProductActions";
 
 export default function Admin() {
   const id: number = new Date().valueOf();
@@ -25,7 +25,7 @@ export default function Admin() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(
-      addProduct({
+      addCard({
         id,
         title: title!,
         description: description!,
@@ -33,7 +33,7 @@ export default function Admin() {
         price: price!,
       })
     );
-    alert("Product added successfully!");
+    alert("Product added successfully...!!");
   };
 
   return (
@@ -97,7 +97,7 @@ export default function Admin() {
           required
         />
         <Button variant="contained" type="submit" sx={{ marginTop: 2 }}>
-          Add
+          Add Card
         </Button>
       </form>
     </Box>

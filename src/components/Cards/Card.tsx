@@ -16,18 +16,18 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
-  deleteProduct,
+  deleteCard,
   setProductCart,
   setProductWishlist,
 } from "../../redux/actions/ProductActions";
 import { RootStore } from "../../redux/store";
 
-interface ProductPropType {
+interface CardType {
   product: ProductType;
   setProduct: React.Dispatch<React.SetStateAction<any>>;
 }
 
-export default function ProductCard(props: ProductPropType) {
+export default function Cards(props: CardType) {
   const { cart, wishlist } = useSelector((state: RootStore) => state.products);
 
   let navigate = useNavigate();
@@ -47,7 +47,7 @@ export default function ProductCard(props: ProductPropType) {
   };
 
   const handleDelete = (id: number) => {
-    dispatch(deleteProduct(id));
+    dispatch(deleteCard(id));
   };
 
   const handleOnClick = (p: ProductType) => {
@@ -106,7 +106,7 @@ export default function ProductCard(props: ProductPropType) {
             onClick={() => handleWishlist(props.product)}
           >
             {inWishlist(props.product?.id!)
-              ? "Added to wishlist"
+              ? "Remove from wishlist"
               : "Add to Wishlist"}
           </Button>
           <Button
@@ -115,7 +115,7 @@ export default function ProductCard(props: ProductPropType) {
             color="secondary"
             onClick={() => handleCart(props.product)}
           >
-            {inCart(props.product?.id!) ? "Added to cart" : "Add to cart"}
+            {inCart(props.product?.id!) ? "Remove from cart" : "Add to cart"}
           </Button>
         </CardActions>
       </Card>

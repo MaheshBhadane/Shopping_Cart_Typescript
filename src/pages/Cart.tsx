@@ -1,21 +1,21 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import ProductCard from "../components/Cards/Card";
+import Cards from "../components/Cards/Card";
 import { useSelector } from "react-redux";
 import { RootStore } from "../redux/store";
 
-interface CartPropType {
+interface CartType {
   setProduct: React.Dispatch<React.SetStateAction<any>>;
 }
 
-export default function Cart(props: CartPropType) {
+export default function Cart(props: CartType) {
   const { cart } = useSelector((state: RootStore) => state.products);
   return (
     <Box sx={{ padding: 3 }}>
       {cart.length ? (
         <Grid container justifyContent="center" spacing={3}>
           {cart.map((product) => (
-            <ProductCard
+            <Cards
               product={product}
               key={product.id}
               setProduct={props.setProduct}

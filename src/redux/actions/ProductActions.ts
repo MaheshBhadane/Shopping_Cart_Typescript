@@ -33,12 +33,12 @@ export const setProductWishlist =
       dispatch({ type: SET_WISHLIST, payload: product });
    };
 
-export const addProduct =
+export const addCard =
    (product: ProductType) => (dispatch: Dispatch<ProductDispatchTypes>) => {
       dispatch({ type: ADD_PRODUCT, payload: product });
    };
 
-export const deleteProduct =
+export const deleteCard =
    (id: number) => (dispatch: Dispatch<ProductDispatchTypes>) => {
       dispatch({ type: DELETE_PRODUCT, payload: id });
    };

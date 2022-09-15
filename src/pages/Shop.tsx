@@ -1,15 +1,15 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import ProductCard from "../components/Cards/Card";
+import Cards from "../components/Cards/Card";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useSelector } from "react-redux";
 import { RootStore } from "../redux/store";
 
-interface ProductPropType {
+interface ProductType {
    setProduct: React.Dispatch<React.SetStateAction<any>>;
 }
 
-export default function Shop(props: ProductPropType) {
+export default function Shop(props: ProductType) {
    const { products, loading, error } = useSelector(
       (state: RootStore) => state.products
    );
@@ -33,7 +33,7 @@ export default function Shop(props: ProductPropType) {
          ) : (
             <Grid container justifyContent="center" spacing={3}>
                {products?.map((product) => (
-                  <ProductCard
+                  <Cards
                      product={product}
                      key={product.id}
                      setProduct={props.setProduct}
