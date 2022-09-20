@@ -5,7 +5,7 @@ import { addCard } from "../redux/actions/ProductActions";
 
 export default function Admin() {
   const id: number = new Date().valueOf();
-  const [image, setImage] = useState<any>();
+  const [image, setImage] = useState<string | ArrayBuffer | null | any>();
   const [title, setTitle] = useState<string>();
   const [description, setDescription] = useState<string>();
   const [price, setPrice] = useState<number>();
