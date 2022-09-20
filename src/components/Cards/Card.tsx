@@ -16,7 +16,7 @@ import {
 } from "../../redux/actions/ProductActions";
 import { RootStore } from "../../redux/store";
 import { useNavigate } from "react-router-dom";
-import { ProductType } from "../../App";
+import { ProductType } from "../Routes";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -33,13 +33,13 @@ export default function Cards(props: CardType) {
 
   const dispatch: Dispatch<any> = useDispatch();
 
-//Check product is in wishlist or not
+  //Check product is in wishlist or not
   const inWishlist = (id: number): boolean => {
     if (wishlist.find((product) => product.id === id)) {
       return true;
     } else return false;
   };
-//Check product is in cart or not
+  //Check product is in cart or not
   const inCart = (id: number): boolean => {
     if (cart.find((product) => product.id === id)) {
       return true;

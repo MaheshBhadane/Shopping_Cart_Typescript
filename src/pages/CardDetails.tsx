@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import React, { Dispatch } from "react";
-import { ProductType } from "../App";
+import { ProductType } from "../components/Routes";
 import { RootStore } from "../redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -25,13 +25,13 @@ export default function CardDetails(props: ProductPropType) {
   const handleCart = (p?: ProductType) => {
     dispatch(setProductCart(p!));
   };
-//Check product is in wishlist or not
+  //Check product is in wishlist or not
   const inWishlist = (id: number): boolean => {
     if (wishlist.find((product) => product.id === id)) {
       return true;
     } else return false;
   };
-//Check product is in cart or not
+  //Check product is in cart or not
   const inCart = (id: number): boolean => {
     if (cart.find((product) => product.id === id)) {
       return true;
