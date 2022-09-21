@@ -83,14 +83,10 @@ export default function Cards(props: CardType) {
           ></CardMedia>
           <CardContent>
             <Typography variant="h6">
-              {props.product.title.length > 20
-                ? props.product.title.substring(0, 20)
-                : props.product.title}
+              {props.product.title.substring(0, 20)}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {props.product.description.length > 100
-                ? props.product.description.substring(0, 100)
-                : props.product.description}
+              {props.product.description.substring(0, 50)}...
             </Typography>
             <Typography mt={2} variant="h6" color="secondary">
               ${props.product.price}
