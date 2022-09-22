@@ -1,7 +1,7 @@
 import React, { Dispatch, useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { addCard } from "../redux/actions/ProductActions";
+import { addCard } from "../redux/Actions/productActions";
 
 export default function Admin() {
   const id: number = new Date().valueOf();

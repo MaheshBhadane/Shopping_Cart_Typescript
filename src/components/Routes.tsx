@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Navbar/Navbar";
-import Home from "../pages/Home";
-import Shop from "../pages/Shop";
-import CardDetails from "../pages/CardDetails";
-import Wishlist from "../pages/Wishlist";
-import Cart from "../pages/Cart";
-import Admin from "../pages/Admin";
+import Navbar from "./Navbar/navbar";
+import Home from "../pages/home";
+import Shop from "../pages/shop";
+import CardDetails from "../pages/cardDetails";
+import Wishlist from "../pages/wishlist";
+import Cart from "../pages/cart";
+import Admin from "../pages/admin";
 import { Typography } from "@mui/material";
-import Error from "../pages/Error";
+import Error from "../pages/error";
 
 //Interface Type DefineSS
 export interface ProductType {

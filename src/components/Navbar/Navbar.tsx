@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootStore } from "../../redux/store";
-import "./Navbar.css";
+import "./navbar.css";
 
 export default function Navbar() {
   const { cart, wishlist } = useSelector((state: RootStore) => state.products);

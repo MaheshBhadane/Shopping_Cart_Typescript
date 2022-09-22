@@ -13,10 +13,10 @@ import {
   deleteCard,
   setProductCart,
   setProductWishlist,
-} from "../../redux/actions/ProductActions";
+} from "../../redux/Actions/productActions";
 import { RootStore } from "../../redux/store";
 import { useNavigate } from "react-router-dom";
-import { ProductType } from "../Routes";
+import { ProductType } from "../routes";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useDispatch, useSelector } from "react-redux";
 

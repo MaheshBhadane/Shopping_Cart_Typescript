@@ -1,12 +1,12 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import React, { Dispatch } from "react";
-import { ProductType } from "../components/Routes";
+import { ProductType } from "../components/routes";
 import { RootStore } from "../redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setProductCart,
   setProductWishlist,
-} from "../redux/actions/ProductActions";
+} from "../redux/Actions/productActions";
 
 //Interface Type Define
 interface ProductPropType {

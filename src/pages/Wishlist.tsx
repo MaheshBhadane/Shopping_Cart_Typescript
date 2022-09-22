@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import Cards from "../components/Cards/Card";
+import Cards from "../components/Cards/card";
 import { useSelector } from "react-redux";
 import { RootStore } from "../redux/store";
 

@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
-import Cards from "../components/Cards/Card";
+import Cards from "../components/Cards/card";
 import { useSelector } from "react-redux";
 import { RootStore } from "../redux/store";
-import Hero from "../components/Hero/Hero";
+import Hero from "../components/Hero/hero";
 import { Link as RouterLink } from "react-router-dom";
 import LinearProgress from "@mui/material/LinearProgress";
 
